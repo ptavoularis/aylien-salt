@@ -39,6 +39,12 @@ first_app_clone:
     - user: www-data
     - require:
       - file: copy_known_hosts
+      - file: /var/www
+
+/var/www:
+  file.directory:
+    - user: www-data
+    - group: www-data
 
 copy_git_ssh_key:
   file.copy:
