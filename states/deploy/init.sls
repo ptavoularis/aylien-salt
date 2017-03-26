@@ -1,8 +1,10 @@
-reload_services_on_app_change:
+reload_fpm_on_app_change:
   service.running:
     - name: php7.0-fpm
     - watch:
       - composer: /srv/www/aylien-slim
+
+reload_nginx_on_app_change:
   service.running:
     - name: nginx
     - watch:
