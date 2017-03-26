@@ -38,7 +38,7 @@ first_app_clone:
     - target: /root/aylien-slim
     - user: www-data
     - require:
-      - file: copy_git_ssh_key
+      - file: copy_known_hosts
 
 copy_git_ssh_key:
   file.copy:
@@ -48,3 +48,13 @@ copy_git_ssh_key:
     - user: www-data
     - group: www-data
     - mode: 0600
+
+copy_known_hosts:
+  file.copy:
+    - name: /var/www/.ssh/known_hosts
+    - source: /root/.ssh/known_hosts
+    - user: www-data
+    - group: www-data
+    - mode: 0644
+    - require:
+      - file: copy_git_ssh_key
