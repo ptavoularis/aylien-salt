@@ -2,7 +2,7 @@ reload_fpm_on_app_change:
   service.running:
     - name: php7.0-fpm
     - watch:
-      - cmd: update_composer
+      - composer: /srv/www/aylien-slim
 
 /srv/www/aylien-slim:
   composer.update:
