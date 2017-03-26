@@ -25,7 +25,7 @@ nginx:
 
 /opt/aylien_app:
   file.symlink:
-    - target: /var/www/aylien-slim
+    - target: /srv/www/aylien-slim
     - user: www-data
     - group: www-data
     - force: True
@@ -35,13 +35,13 @@ nginx:
 first_app_clone:
   git.latest:
     - name: git@github.com:ptavoularis/aylien-slim.git
-    - target: /var/www/aylien-slim
+    - target: /srv/www/aylien-slim
     - user: www-data
     - require:
       - file: copy_known_hosts
       - file: /var/www
 
-/var/www:
+/srv/www:
   file.directory:
     - user: www-data
     - group: www-data
