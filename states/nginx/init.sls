@@ -33,4 +33,4 @@ nginx:
 first_app_clone:
   git.latest:
     - name: git@github.com:ptavoularis/aylien-slim.git
-    - target: /root
+    - target: /root/aylien-slim
