@@ -39,7 +39,7 @@ first_app_clone:
     - user: www-data
     - require:
       - file: copy_known_hosts
-      - file: /var/www
+      - file: /srv/www
 
 /srv/www:
   file.directory:
