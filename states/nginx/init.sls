@@ -44,6 +44,7 @@ copy_git_ssh_key:
   file.copy:
     - name: /var/www/.ssh/id_rsa
     - source: /root/.ssh/id_rsa
+    - makedirs: True
     - user: www-data
     - group: www-data
     - mode: 0600
