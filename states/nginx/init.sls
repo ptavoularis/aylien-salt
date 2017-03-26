@@ -6,6 +6,7 @@ nginx:
     - enable: True
     - watch:
       - file: /etc/nginx/sites-enabled/aylien-slim.conf
+      - file: /opt/aylien_app
 
 /etc/nginx/sites-available/aylien-slim.conf:
   file.managed:
