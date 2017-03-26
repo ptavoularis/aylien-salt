@@ -14,7 +14,7 @@ install_composer:
     - require:
       - pkg: php7
 
-php-fpm:
+php7.0-fpm:
   service.running:
     - enable: True
     - require:
