@@ -4,9 +4,8 @@ reload_fpm_on_app_change:
     - watch:
       - cmd: update_composer
 
-update_composer:
+/srv/www/aylien-slim:
   composer.update:
-    - dir: /srv/www/aylien-slim
     - user: www-data
     - no_dev: True
     - optimize: True
