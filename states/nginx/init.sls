@@ -28,7 +28,7 @@ nginx:
     - target: /root/aylien-slim
     - force: True
     - require:
-      - git: firts_app_clone
+      - git: first_app_clone
 
 first_app_clone:
   git.latest:
